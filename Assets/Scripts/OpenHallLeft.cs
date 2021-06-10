@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenFront : MonoBehaviour
+public class OpenHallLeft : MonoBehaviour
 {
-    public bool testDoor = false, isTheDoorOpen = false, front = false, back = true, fullOpen;
-    public float doorOpenAngle = 180f, doorClosingAngle = 90f, smooth = 2f;
+    public bool testDoor = false, isTheDoorOpen = false, front = false, back = true;
+    public float doorOpenAngle = -90f, doorClosingAngle = 0f, smooth = 2f;
+
 
     private AudioSource audioSource;
     public AudioClip openingSound;
@@ -14,7 +15,7 @@ public class OpenFront : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-    public void ChangeDoorState()
+    public void ChangeDoorLHallState()
     {
         isTheDoorOpen = !isTheDoorOpen;
 
@@ -28,39 +29,28 @@ public class OpenFront : MonoBehaviour
     {
         if (isTheDoorOpen)
         {
-            if (front && fullOpen == false)
+            if (back)
             {
                 Quaternion targetRotationOpen = Quaternion.Euler(0, doorOpenAngle, 0);
                 transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotationOpen, smooth * Time.deltaTime);
-
-                if (transform.localRotation == targetRotationOpen)
-                {
-                    fullOpen = true;
-                }
             }
-            else if (back && fullOpen == false)
+            else
             {
                 Quaternion targetRotationOpen = Quaternion.Euler(0, 0, 0);
                 transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotationOpen, smooth * Time.deltaTime);
-
-                if (transform.localRotation == targetRotationOpen)
-                {
-                    fullOpen = true;
-                }
             }
+
         }
         else
         {
             Quaternion targetRotationClosed = Quaternion.Euler(0, doorClosingAngle, 0);
             transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotationClosed, smooth * Time.deltaTime);
-            fullOpen = false;
         }
 
         if (testDoor)
         {
-            ChangeDoorState();
+            ChangeDoorLHallState();
             testDoor = false;
         }
     }
-
 }
