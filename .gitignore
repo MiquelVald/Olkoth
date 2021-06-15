@@ -5,6 +5,9 @@ Temp/
 Library/
 Assets/1ST LEVEL/BlackantMasterStudio/*
 Assets/1ST LEVEL/Mega Fantasy Props Pack/*
+Assets/1ST LEVEL/BlackantMasterStudio.meta
+Assets/1ST LEVEL/Mega Fantasy Props Pack.meta
+Assets/1ST LEVEL/Suburban Structure Kit.meta
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -20,6 +23,7 @@ obj/
 *.user
 *.unityproj
 *.booproj
+*.meta
 
 # ============ #
 # OS generated #
