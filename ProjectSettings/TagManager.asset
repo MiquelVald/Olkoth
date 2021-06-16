@@ -7,6 +7,8 @@ TagManager:
   - FrontTag
   - BackTag
   - Door
+  - Candil
+  - Enemigo
   layers:
   - Default
   - TransparentFX

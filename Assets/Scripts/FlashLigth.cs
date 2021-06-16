@@ -13,7 +13,8 @@ public class FlashLigth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        objeto.gameObject.SetActive(true);
+        Luz1.enabled = false;
+        objeto.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
