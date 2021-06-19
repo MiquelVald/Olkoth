@@ -34,6 +34,11 @@ public class OpenHallLeft : MonoBehaviour
                 Quaternion targetRotationOpen = Quaternion.Euler(0, doorOpenAngle, 0);
                 transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotationOpen, smooth * Time.deltaTime);
             }
+            else if (front)
+            {
+                Quaternion targetRotationOpen = Quaternion.Euler(0, 90, 0);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotationOpen, smooth * Time.deltaTime);
+            }
             else
             {
                 Quaternion targetRotationOpen = Quaternion.Euler(0, 0, 0);

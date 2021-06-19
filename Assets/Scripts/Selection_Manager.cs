@@ -9,6 +9,8 @@ public class Selection_Manager : MonoBehaviour
     public LayerMask layerMask;
 
     public OpenFront openFront;
+    public OpenHallLeft openHallLeft;
+    public OpenHallRight openHallRight;
 
     public string interactButton;
 
@@ -28,11 +30,14 @@ public class Selection_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+            // Damos de alta un objeto de raycast
             RaycastHit hit;
+            // Damos de alta un rayo que seguirá la posición del ratón
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //Si el objeto interactivo se encuentra dentro del rango del rayo...
             if (Physics.Raycast(ray, out hit, rayLength, layerMask))
             {
+                //Si no estamos interactuando con nada, pos bye manita, caso contrario, actívala
                 if (isInteracting == false)
                 {
                     if (interactIcon != null)
@@ -40,11 +45,21 @@ public class Selection_Manager : MonoBehaviour
                         interactIcon.enabled = true;
                     }
                 }
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log(hit.collider.name);
-                    openFront.ChangeDoorState();
-                }else if (hit.collider.CompareTag("Safe"))
+            //Hacemos algo al presionar la tecla E
+            if (Input.GetKeyDown(KeyCode.E) && hit.collider.CompareTag("Door"))
+            {
+                //TEST: Borrar al final
+                Debug.Log(hit.collider.name);
+
+                openFront.ChangeDoorState();
+
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && hit.collider.CompareTag("DoorHall"))
+            {
+                openHallLeft.ChangeDoorLHallState();
+                openHallRight.ChangeDoorRHallState();
+            }
+            else if (hit.collider.CompareTag("Safe")) 
                 {
                     hit.collider.GetComponent<OpenSafe>().ShowSafeCanvas();
                 }
