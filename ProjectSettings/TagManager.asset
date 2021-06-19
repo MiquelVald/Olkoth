@@ -11,6 +11,9 @@ TagManager:
   - Enemigo
   - InitialDoor
   - Safe
+  - DoorHall
+  - Key
+  - LastDoor
   layers:
   - Default
   - TransparentFX

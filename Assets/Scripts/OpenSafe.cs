@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 public class OpenSafe : MonoBehaviour
 {
 
     public Canvas safeCanvas;
+    public GameObject playerObject;
+
 
     void Start()
     {
@@ -14,6 +17,7 @@ public class OpenSafe : MonoBehaviour
     public void ShowSafeCanvas()
     {
         safeCanvas.enabled = true;
+        playerObject.GetComponent<FirstPersonController>().enabled = false;
     }
 
     // Update is called once per frame
