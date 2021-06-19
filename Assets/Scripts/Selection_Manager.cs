@@ -66,12 +66,16 @@ public class Selection_Manager : MonoBehaviour
                 else if (hit.collider.CompareTag("DoorHall"))
                 {
                     openHallLeft.ChangeDoorLHallState();
-                    openHallRight.ChangeDoorRHallState();
+                    openHallRight.ChangeDoorRHallState(); 
                 }
 
                 else if (hit.collider.CompareTag("Safe"))
                 {
                     hit.collider.GetComponent<OpenSafe>().ShowSafeCanvas();
+                }
+                 else if (hit.collider.CompareTag("Note"))
+                {
+                    hit.collider.GetComponent<Notes>().ShowNoteImage();
                 }
             }
         }

@@ -8,9 +8,12 @@ public class KeyHandler : MonoBehaviour
     public AudioClip pickingUp;
     public AudioSource audioSource;
 
+    public OpenSafe openSafe;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
     }
 
     public void UnlockDoor()
