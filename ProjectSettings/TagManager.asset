@@ -15,6 +15,7 @@ TagManager:
   - Key
   - LastDoor
   - Note
+  - CandilA
   layers:
   - Default
   - TransparentFX
