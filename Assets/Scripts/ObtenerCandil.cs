@@ -12,6 +12,7 @@ public class ObtenerCandil : MonoBehaviour
     public GameObject objeto4;
     public Light Luz1;
     public Light Luz2;
+    public int C = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class ObtenerCandil : MonoBehaviour
             objeto4.gameObject.SetActive(false);
             Luz1.enabled = true;
             Luz2.enabled = true;
+            C = 1;
         }
     }
 }

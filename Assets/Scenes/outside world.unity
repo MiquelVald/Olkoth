@@ -422,6 +422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bf0ec433110c54ca44c2d68116dfb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  v: {fileID: 352710724}
+  Condi: 0
 --- !u!1001 &152743739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1510,6 +1512,7 @@ MonoBehaviour:
   objeto4: {fileID: 352710722}
   Luz1: {fileID: 787281383}
   Luz2: {fileID: 1677760755}
+  C: 0
 --- !u!1001 &451533268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1791,25 +1794,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 545498522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a727288a6c50d46a0584e810ef606c, type: 3}
+  m_Script: {fileID: 11500000, guid: 836e465516a39df4283fe21d2212eaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Luz1: {fileID: 1677760755}
-  objeto: {fileID: 89901539}
---- !u!114 &545498530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545498522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a727288a6c50d46a0584e810ef606c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Luz1: {fileID: 1677760755}
-  objeto: {fileID: 1325972254}
 --- !u!1001 &566038965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3244,6 +3232,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 291974050712305533, guid: fe44196c5e4e1444db4df3069ca7c43e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1893486744694029556, guid: fe44196c5e4e1444db4df3069ca7c43e,
         type: 3}
       propertyPath: m_Name
@@ -3324,10 +3317,25 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -2.8944998
       objectReference: {fileID: 0}
+    - target: {fileID: 2917844058072118190, guid: fe44196c5e4e1444db4df3069ca7c43e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178131883011782042, guid: fe44196c5e4e1444db4df3069ca7c43e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5306788289771731077, guid: fe44196c5e4e1444db4df3069ca7c43e,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -14.112036
+      objectReference: {fileID: 0}
+    - target: {fileID: 7143631640258438307, guid: fe44196c5e4e1444db4df3069ca7c43e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe44196c5e4e1444db4df3069ca7c43e, type: 3}
@@ -5692,6 +5700,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846316949804719432, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 3}
+      propertyPath: m_TagString
+      value: CandilA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
