@@ -22,7 +22,7 @@ public class LoadingScreenBarSystem : MonoBehaviour {
     }
 
     // Used to try. Delete the comment lines (25 and 36)
-    
+    /*
     public void Update()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -33,7 +33,7 @@ public class LoadingScreenBarSystem : MonoBehaviour {
                 loadingText.text = "%" + (100 * bar.transform.localScale.x).ToString("####");
         }
     }
-    
+    */
 
     private void Start()
     {
