@@ -9,6 +9,12 @@ TagManager:
   - Door
   - Candil
   - Enemigo
+  - InitialDoor
+  - Safe
+  - DoorHall
+  - Key
+  - LastDoor
+  - Note
   layers:
   - Default
   - TransparentFX

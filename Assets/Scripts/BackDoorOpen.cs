@@ -11,6 +11,10 @@ public class BackDoorOpen : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //openFront.ChangeDoorState();
+            }
             openFront.front = false;
             openFront.back = true;
         }

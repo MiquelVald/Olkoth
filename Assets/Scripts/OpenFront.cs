@@ -7,7 +7,7 @@ public class OpenFront : MonoBehaviour
     public bool testDoor = false, isTheDoorOpen = false, front = false, back = true, fullOpen;
     public float doorOpenAngle = 180f, doorClosingAngle = 90f, smooth = 2f;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip openingSound;
 
     void Start()
@@ -16,6 +16,7 @@ public class OpenFront : MonoBehaviour
     }
     public void ChangeDoorState()
     {
+
         isTheDoorOpen = !isTheDoorOpen;
 
         if (audioSource != null)
@@ -24,7 +25,7 @@ public class OpenFront : MonoBehaviour
         }
     }
 
-    void Update()
+    public void Update()
     {
         if (isTheDoorOpen)
         {
