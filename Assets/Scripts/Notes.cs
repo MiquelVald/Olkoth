@@ -23,6 +23,7 @@ public class Notes : MonoBehaviour
     {
         noteImage.enabled = true;
         audioSource.PlayOneShot(pickupSound);
+        
         playerObject.GetComponent<FirstPersonController>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
