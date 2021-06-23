@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GoToScene : MonoBehaviour
 {
     public ObtenerCandil v;
-    public int Condi = 0;
+    public bool Condi = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,14 +17,14 @@ public class GoToScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Condi = v.C;
+        Condi = v.CH;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (Condi == 1)
+            if (Condi == true)
             {
                 LevelLoader.LoadLevel("House level");
             }
