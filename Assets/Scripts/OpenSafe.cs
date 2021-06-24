@@ -13,7 +13,6 @@ public class OpenSafe : MonoBehaviour
     public Text textNum_two;
     public Text textNum_three;
     public AudioSource audioSource;
-    public AudioClip monsterGrowl;
 
 
     private int num_1 = 0;
