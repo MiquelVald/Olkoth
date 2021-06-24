@@ -9,7 +9,6 @@ public class OpenSafe : MonoBehaviour
 
     public Canvas safeCanvas;
     public GameObject playerObject;
-    public GameObject lamp;
     public Text textNum_one;
     public Text textNum_two;
     public Text textNum_three;
@@ -20,12 +19,12 @@ public class OpenSafe : MonoBehaviour
     private int num_1 = 0;
     private int num_2 = 0;
     private int num_3 = 0;
-    
+
 
 
     public bool opened;
 
- 
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -45,7 +44,7 @@ public class OpenSafe : MonoBehaviour
     {
         if (_number == 1)
         {
-            
+
             num_1++;
             Debug.Log(num_1);
             textNum_one.text = num_1.ToString();
@@ -54,9 +53,10 @@ public class OpenSafe : MonoBehaviour
                 num_1 = 0;
                 textNum_one.text = num_1.ToString();
             }
-        }else if (_number == 2)
+        }
+        else if (_number == 2)
         {
-            
+
             num_2++;
             Debug.Log(num_2);
             textNum_two.text = num_2.ToString();
@@ -65,9 +65,10 @@ public class OpenSafe : MonoBehaviour
                 num_2 = 0;
                 textNum_two.text = num_2.ToString();
             }
-        }else if (_number == 3)
+        }
+        else if (_number == 3)
         {
-            
+
             num_3++;
             Debug.Log(num_3);
             textNum_three.text = num_3.ToString();
@@ -125,7 +126,7 @@ public class OpenSafe : MonoBehaviour
             safeCanvas.enabled = false;
         }
 
-        if (num_1 == 3 && num_2 == 4 && num_3 == 8)
+        if (num_1 == 8 && num_2 == 4 && num_3 == 1)
         {
             opened = true;
         }
@@ -139,7 +140,7 @@ public class OpenSafe : MonoBehaviour
 
     public void UnlockSafe()
     {
-       
+
         Quaternion targetRotationOpenn = Quaternion.Euler(0, 0, 90f);
         transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotationOpenn, 2f * Time.deltaTime);
         Cursor.visible = false;
