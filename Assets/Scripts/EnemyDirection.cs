@@ -20,8 +20,6 @@ public class EnemyDirection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ani.SetBool("move_forward", false);
-        ani.SetBool("move_forward_fast", true);
         nav.SetDestination(player.position);
     }
 
@@ -34,6 +32,22 @@ public class EnemyDirection : MonoBehaviour
            ani.SetBool("idle_combat", true);
            ani.SetBool("attack_short_001", true);
            nav.SetDestination(player.position);
+        }
+
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            ani.SetBool("idle_normal", true);
+            ani.SetBool("move_forward", true);
+            ani.SetBool("idle_normal", false);
+            ani.SetBool("move_forward", false);
+            ani.SetBool("move_forward_fast", true);
+            ani.SetBool("idle_combat", false);
+            ani.SetBool("attack_short_001", false);
+            nav.SetDestination(player.position);
         }
 
     }
