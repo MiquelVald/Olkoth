@@ -6,12 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PantallaInicio.unity
+    guid: 0686ea390fa650f4581a9b5ce4667c13
+  - enabled: 1
+    path: Assets/Scenes/Relato.unity
+    guid: fd3e314f78e3b8f4aad4484b585c5f7d
+  - enabled: 1
+    path: Assets/Scenes/Loading2.unity
+    guid: 292f3484dbebcf442acca5365949de0b
+  - enabled: 1
     path: Assets/Scenes/outside world.unity
     guid: 4a0d826723d461747ba882b8ea27cbbe
   - enabled: 1
     path: Assets/Scenes/Loading.unity
-    guid: c24cb004a2f6607498d8e618c3ee200f
+    guid: fcd511db39ad7654fb8256a5946346f2
   - enabled: 1
     path: Assets/Scenes/House level.unity
     guid: 76a7a5856f215524887bcad95a67a66b
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 32012ac5572b0764ab21715389cd603c
   m_configObjects: {}

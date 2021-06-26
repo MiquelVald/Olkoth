@@ -48,14 +48,14 @@ public class Selection_Manager : MonoBehaviour
             //Hacemos algo al presionar la tecla E
             if (Input.GetKeyDown(KeyCode.E))
             {
-                 if (hit.collider.CompareTag("Door"))
+                if (hit.collider.CompareTag("Door"))
                 {
                     //TEST: Borrar al final
                     Debug.Log(hit.collider.name);
 
                     openFront.ChangeDoorState();
                 }
-                 else if (hit.collider.CompareTag("Key"))
+                else if (hit.collider.CompareTag("Key"))
                 {
                     hit.collider.GetComponent<KeyHandler>().UnlockDoor();
                 }
@@ -66,21 +66,25 @@ public class Selection_Manager : MonoBehaviour
                 else if (hit.collider.CompareTag("DoorHall"))
                 {
                     openHallLeft.ChangeDoorLHallState();
-                    openHallRight.ChangeDoorRHallState(); 
+                    openHallRight.ChangeDoorRHallState();
                 }
 
                 else if (hit.collider.CompareTag("Safe"))
                 {
                     hit.collider.GetComponent<OpenSafe>().ShowSafeCanvas();
                 }
-                 else if (hit.collider.CompareTag("Note"))
+                else if (hit.collider.CompareTag("Note"))
                 {
                     hit.collider.GetComponent<Notes>().ShowNoteImage();
                 }
+                else if (hit.collider.CompareTag("ScreamerPainting"))
+                {
+                    hit.collider.GetComponent<LizScream>().Scream();
+                }
             }
         }
-    
-        
+
+
         else
         {
             interactIcon.enabled = false;

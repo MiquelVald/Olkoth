@@ -8,6 +8,9 @@ public class EnegimoOutside : MonoBehaviour
 {
     public static int countShed = 0;
     public GameObject objetoenemigo;
+    public GameObject objetoenemigo2;
+    public GameObject objetoenemigo3;
+    public GameObject objetoenemigo4;
     //public GameObject objetoefecto;
     public GameObject objetocollider;
 
@@ -15,6 +18,9 @@ public class EnegimoOutside : MonoBehaviour
     void Start()
     {
         objetoenemigo.gameObject.SetActive(false);
+        objetoenemigo2.gameObject.SetActive(false);
+        objetoenemigo3.gameObject.SetActive(false);
+        objetoenemigo4.gameObject.SetActive(false);
         //objetoefecto.gameObject.SetActive(false);
         objetocollider.gameObject.SetActive(true);
     }
@@ -43,6 +49,9 @@ public class EnegimoOutside : MonoBehaviour
             if(countShed == 2)
             {
                 objetoenemigo.gameObject.SetActive(true);
+                objetoenemigo2.gameObject.SetActive(true);
+                objetoenemigo3.gameObject.SetActive(true);
+                objetoenemigo4.gameObject.SetActive(true);
                 //objetoefecto.gameObject.SetActive(true);
                 objetocollider.gameObject.SetActive(false);
 
