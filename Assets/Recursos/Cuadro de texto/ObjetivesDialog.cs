@@ -10,6 +10,7 @@ public class ObjetivesDialog : MonoBehaviour
     public string textValue;
     public string textValue2;
     public GameObject panel;
+    public GameObject Objetive;
     public Text textElement;
     public ObtenerCandil txt2;
     Coroutine auxCoroutine;
@@ -25,10 +26,17 @@ public class ObjetivesDialog : MonoBehaviour
     {
         if (txt2.C == true)
         {   
+            Objetive.gameObject.SetActive(true);
             textElement.text = "";
             textValue = textValue2;
             auxCoroutine = StartCoroutine(Objetivo2());
             txt2.C = false;
+        }
+
+        if (Input.GetKey("e"))
+        {
+            textElement.text = "";
+            Objetive.gameObject.SetActive(false);
         }
     }
 

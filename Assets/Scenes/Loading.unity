@@ -352,8 +352,8 @@ PrefabInstance:
     - target: {fileID: 114324633318724984, guid: 5ebad8a41bbacbe419403ab6a0c52078,
         type: 3}
       propertyPath: m_Text
-      value: "Consejo...\t\n\nNo trates de enfrentarte al enemigo. No eres un superheroe.\n\nComo
-        dicen por ahi: mas vale aqui corri\xF3, que aqui quedo."
+      value: "Advice...\t\r\n\r\nDon't try to take on the enemy. You are not a superhero.\r\n\r\nAs
+        they say: it's better here he ran, than here he stayed."
       objectReference: {fileID: 0}
     - target: {fileID: 114324633318724984, guid: 5ebad8a41bbacbe419403ab6a0c52078,
         type: 3}
