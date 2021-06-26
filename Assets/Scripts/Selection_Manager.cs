@@ -72,7 +72,6 @@ public class Selection_Manager : MonoBehaviour
                 else if (hit.collider.CompareTag("Safe"))
                 {
                     hit.collider.GetComponent<OpenSafe>().ShowSafeCanvas();
-                    hit.collider.GetComponent<stepAudio>().SteppingAudio();
                 }
                 else if (hit.collider.CompareTag("Note"))
                 {
