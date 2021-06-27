@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 292f3484dbebcf442acca5365949de0b
   - enabled: 1
     path: Assets/Scenes/outside world.unity
-    guid: 4a0d826723d461747ba882b8ea27cbbe
+    guid: b32ac6074aebd3d488efc192324000d3
   - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: fcd511db39ad7654fb8256a5946346f2
@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverL2.unity
     guid: 9570adfd628bfda47a6c698d879562f8
+  - enabled: 1
+    path: Assets/Scenes/FinalGame.unity
+    guid: df71cb84feab17b4f906c501086e6d72
   m_configObjects: {}
