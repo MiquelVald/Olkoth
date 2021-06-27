@@ -12,7 +12,7 @@ public class EnegimoOutside : MonoBehaviour
     public GameObject objetoenemigo3;
     public GameObject objetoenemigo4;
     //public GameObject objetoefecto;
-    public GameObject objetocollider;
+    //public GameObject objetocollider;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class EnegimoOutside : MonoBehaviour
         objetoenemigo3.gameObject.SetActive(false);
         objetoenemigo4.gameObject.SetActive(false);
         //objetoefecto.gameObject.SetActive(false);
-        objetocollider.gameObject.SetActive(true);
+        //objetocollider.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class EnegimoOutside : MonoBehaviour
                 objetoenemigo3.gameObject.SetActive(true);
                 objetoenemigo4.gameObject.SetActive(true);
                 //objetoefecto.gameObject.SetActive(true);
-                objetocollider.gameObject.SetActive(false);
+                //objetocollider.gameObject.SetActive(false);
 
             }
         }

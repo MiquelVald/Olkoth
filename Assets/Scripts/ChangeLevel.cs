@@ -1,17 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class VidaPlayer2 : MonoBehaviour
+public class ChangeLevel : MonoBehaviour
 {
-
-    public float vida = 100;
-
-    public Image barraDeVida;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +14,14 @@ public class VidaPlayer2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vida = Mathf.Clamp(vida, 0, 100);
-
-        barraDeVida.fillAmount = vida / 100;
-
-        if (vida == 0)
-        {
-            SceneManager.LoadScene("GameOverL2");
-        }
+        
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            SceneManager.LoadScene("FinalGame");
+        }
+    }
 }
