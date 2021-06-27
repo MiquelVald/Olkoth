@@ -12,7 +12,7 @@ public class EnemyDirectionCrawler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("MainCamera").transform;
         nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
         ani = GetComponent<Animator>();
     }
@@ -23,13 +23,14 @@ public class EnemyDirectionCrawler : MonoBehaviour
         nav.SetDestination(player.position);
     }
 
-
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            ani.SetBool("Ataque", true);
-            nav.SetDestination(player.position);
+            ani.SetBool("move_forward_fast", false);
+            ani.SetBool("idle_normal", false);
+            ani.SetBool("idle_combat", true);
+            ani.SetBool("attack_short_001", true);
         }
 
     }
@@ -38,8 +39,13 @@ public class EnemyDirectionCrawler : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            ani.SetBool("Ataque", false);
-            nav.SetDestination(player.position);
+            ani.SetBool("idle_normal", true);
+            ani.SetBool("move_forward", true);
+            ani.SetBool("idle_normal", false);
+            ani.SetBool("move_forward", false);
+            ani.SetBool("move_forward_fast", true);
+            ani.SetBool("idle_combat", false);
+            ani.SetBool("attack_short_001", false);
         }
 
     }
